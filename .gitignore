@@ -1,0 +1,8 @@
+build/*
+vendor/*
+
+out.png
+
+.vs/
+.vscode/
+.DS_Store
