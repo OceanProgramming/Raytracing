@@ -1,3 +1,5 @@
+#pragma once
+
 #include "../include/RenderObject.hpp"
 
 class Sphere : public RenderObject

@@ -31,8 +31,9 @@ int Image::save(const char* filename)
 
 Vector3 Image::getPixel(double u, double v) const
 {
+	//std::cout << u << " " << v << "\n";
 	int x = u * width;
 	int y = v * height;
 	int i = (x + width * y) * 3;
-	return Vector3(buf[i], buf[i+1], buf[i+2]);
+	return Vector3(buf[i], buf[i+1], buf[i+2]) / 255.0;
 }

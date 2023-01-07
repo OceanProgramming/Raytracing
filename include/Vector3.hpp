@@ -1,6 +1,7 @@
 #pragma once
 
 #include <math.h>
+#include <cstdlib>
 #include <iostream>
 
 class Vector3
@@ -27,5 +28,7 @@ public:
 	friend std::ostream& operator << (std::ostream &os, const Vector3 &v);
 };
 
+double getRandom();
 double dot(const Vector3 &v1, const Vector3 &v2);
 Vector3 cross(const Vector3 &v1, const Vector3 &v2);
+Vector3 onUnitSphere();

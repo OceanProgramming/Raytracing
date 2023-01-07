@@ -72,6 +72,13 @@ std::ostream& operator << (std::ostream &os, const Vector3 &v)
 	return os << "[" << v.x << ", " << v.y << ", " << v.z << "]";
 }
 
+const double randMax = (double)(RAND_MAX + 1);
+
+double getRandom()
+{
+	return ((double)rand() + 1) / randMax;
+}
+
 double dot(const Vector3 &v1, const Vector3 &v2)
 {
 	return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z;
@@ -80,4 +87,11 @@ double dot(const Vector3 &v1, const Vector3 &v2)
 Vector3 cross(const Vector3 &v1, const Vector3 &v2)
 {
 	return Vector3(v1.y * v2.z - v1.z * v2.y, v1.z * v2.x - v1.x * v2.z, v1.x * v2.y - v1.y * v2.x);
+}
+
+Vector3 onUnitSphere()
+{
+	double u = 2 * 3.14159 * getRandom();
+	double v = acos(2 * getRandom() - 1);
+	return Vector3(cos(u) * cos(v), sin(u) * cos(v), sin(v));
 }

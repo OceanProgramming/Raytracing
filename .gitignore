@@ -5,4 +5,8 @@ out.png
 
 .vs/
 .vscode/
+
+*.sln
+*.vcxproj*
+
 .DS_Store
